@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    height: 15vh;
+}
+.wrapper {
+    width: 100%;
+    margin: auto;
+    height: 80px;
+    width: 100%;
+    background: rgba(0, 75, 255);
+}
+.banner {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: orange;
+    color:#fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 9999;  
+    margin-bottom: 35px;
+}
+.footerWrap {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer {
+    position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+}
+.company-name {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.company-address, .company-phone, .company-email {
+    margin-bottom: 5px;
+}
+.menu {
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.menu li{
+    display: inline-block;
+}
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.menu li a.active,
+.menu li a:hover {
+    color: orange;
+}
+.menu li a.deactive {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo {
+    float: left;
+    margin-top: 25px;
+    margin-left: 10px;
+    color: orange;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+form {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+}
+.search {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+}
+.search-img {
+    width: 20px;
+}
+.filter-button {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 50px;
+}
+.filter-img {
+    width: 20px;
+}
+.filter-button .filter {
+    background-color: #004bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.filter-button .filter:hover {
+    background-color: hsl(30, 100%, 50%);
+    color: #fff;
+}
+.filter-options {
+    display: none;
+    flex: wrap;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    list-style: none;
+}
+.filter-options p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.filter {
+    margin-bottom: 20px;
+}
+.filter-options input {
+    margin-left: 10px;
+}
+.filter-container {
+    background-color: lightgrey;
+    border-radius: 5px 5px 5px 5px;
+}
+.show {
+    display: block;
+}
+
+.col-sm-2 {
+   position: center;
+   max-width: 300px; 
+   flex: 1 1 210px;
+   text-align: center;
+   height: 400px;
+   margin: 0px;
+   
+   
+}
+
+.CustomImage
+{
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5%;
+    
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }

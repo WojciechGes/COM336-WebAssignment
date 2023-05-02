@@ -1,0 +1,32 @@
+<?php include("login_Session.php");?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <Title>
+        <?php 
+$Page_Title_Name = "Login"; 
+echo $Page_Title_Name;
+
+?>
+    </Title>
+    <link rel="stylesheet" href="assets/index.css">
+</head>
+
+<body>
+
+<?php include("navbar.php");?>
+
+   <form method="POST" action="<?php $action;?>">
+   <label>Username:</label>
+   <input type="text" name="email">
+   <br>
+   <label>Password:</label>
+   <input type="password" name="password">
+   <br>
+   <button type="submit">Log in</button>
+</form>
+
+</body>
+</html>
+

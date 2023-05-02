@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ford</title>
+        <link rel="stylesheet" href="assets/order.css">
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class ="logo">
+                    <img src="../webpage/assets/images/fordLogo.jpg" alt="logo">
+                </div>
+                <ul class = "menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="...">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="reg-log.html">Register/Log In</a></li>
+                    <li><a class = "active" href="order.html">Order</a></li>
+                </ul>
+            </div>
+            <div class="banner">Order</div>
+        </header>
+        <form>
+            <input type="text" placeholder="Search" name="query">
+            <button class="search">
+                <img src="assets/images/search.png" alt="Search" class="search-img">
+            </button>
+        </form>
+        <div class="filter-button">
+            <button class="filter">
+                <img src="assets/images/filter.png" alt="Filter" class="filter-img">
+            </button>
+            <div class="filter-container">
+                <div class="filter-options">
+                    <br><p>Model</p>
+                    <input type="checkbox" id="ford-mustang" name="model" value="ford-mustang">
+                    <label for="ford-mustang">Mustang</label><br>
+                    <input type="checkbox" id="ford-focus" name="model" value="ford-focus">
+                    <label for="ford-focus">Focus</label><br>
+                    <input type="checkbox" id="ford-escape" name="model" value="ford-escape">
+                    <label for="ford-escape">Escape</label>
+                </div>
+                <div class="filter-options">
+                    <br><p>Body Style</p>
+                    <input type="checkbox" id="suv" name="body-style" value="suv">
+                    <label for="suv">SUV</label><br>
+                    <input type="checkbox" id="hatchback" name="body-style" value="hatchback">
+                    <label for="hatchback">Hatchback</label><br>
+                    <input type="checkbox" id="sedan" name="body-style" value="sedan">
+                    <label for="sedan">Sedan</label>
+                </div>
+                <div class="filter-options">
+                    <br><p>No. of doors</p>
+                    <input type="checkbox" id="2-doors" name="num-of-doors" value="2-doors">
+                    <label for="2-doors">2 doors</label><br>
+                    <input type="checkbox" id="4-doors" name="num-of-doors" value="4-doors">
+                    <label for="4-doors">4 doors</label><br>
+                    <input type="checkbox" id="5-doors" name="num-of-doors" value="5-doors">
+                    <label for="5-doors">5 doors</label>
+                </div>
+                <div class="filter-options">
+                    <br><p>Price Order</p>
+                    <input type="checkbox" id="low-to-high" name="price" value="low-to-high">
+                    <label for="low-to-high">Low-to-High</label><br>
+                    <input type="checkbox" id="high-to-low" name="price" value="high-to-low">
+                    <label for="high-to-low">High-to-Low</label>
+                </div>
+            </div>
+        </div>
+        <script src="assets/filter.js"></script>
+    </body>
+</html>

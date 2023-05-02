@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ford</title>
+        <link rel="stylesheet" href="assets/contact.css">
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class ="logo">
+                    <a href="index.html">
+                        <img src="assets/images/ford.png" alt="logo">
+                    </a>
+                </div>
+                <ul class = "menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="...">FAQs</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a class = "active" href="contact.html">Contact Us</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="register.html"><img src ="assets/images/person.png" alt="Register/Log In"></a></li>
+                </ul>        
+            </div>
+        </header>
+        <main>
+        <div class="banner">Contact Us</div>
+        <div class = "get-in-touch">
+            <h4 style = "text-align: left;">Get In Touch</h4>
+        </div>
+            <section class = "contactUs">
+                    <iframe src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2320.0559192478327!2d-6.395886383961492!3d54.44429969960345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4860fab24462cf23%3A0x5f96a7aede3ba3a2!2sTrustFord%20Craigavon%20Car%20%26%20Transit%20Centre!5e0!3m2!1sen!2suk!4v1679997068095!5m2!1sen!2suk">
+                    </iframe>
+                    <div class="container">
+                            <h4>Contact Details</h4>
+                            <p>Address: Highfield Rd, Craigavon BT64 1AG</p><br>
+                            <p>Phone: 123 456 7890</p><br>
+                            <p>Email: infoFord@outlook.com</p>
+                    </div>
+                        <div class = "form-box">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-col col-1">
+                                        <label for="firstName"><span>First Name: </span></label>
+                                        <input type = "text" id = "firstName" name = "firstName" required
+                                        placeholder="Your Name">
+
+                                        <label for="email"><span>Email: </span></label>
+                                        <input type = "email" id = "email" name = "email" required
+                                        placeholder="someone@example.com">
+            
+                                        <label for="address"><span>Address: </span></label>
+                                        <input type="text" id = "address" name = "address" required
+                                        placeholder="123 Example St, Derry, Northern Ireland">
+                                    </div>
+                                    <div class="form-col col-2">
+                                        <label for="timeOfDay"><span>Time of Day:</span></label>
+                                        <select id="timeOfDay" name = "timeOfDay">
+                                            <option value = "any">Any</option>
+                                            <option value = "morning">Morning</option>
+                                            <option value = "afternoon">Afternoon</option>
+                                        </select>
+
+                                        <label for="message"></label>
+                                        <textarea id = "message" name = "message" placeholder="Your Message" rows = "5" cols="4"></textarea>
+
+                                        <input type="submit" value = "Submit">
+                                    </div>
+                                </div>                                
+                            </form>
+                        </div>                    
+            </section>
+        </main>
+        <button id="scroll-to-top">
+            <img src="assets/images/arrow.png" alt="Top" class="arrow-img">
+        </button>
+        <script src="assets/index.js"></script>
+    </body>
+    <footer>
+        <div class="footerWrap">
+            <p class="company-name">&copy; Ford</p>
+            <p class="company-address">Highfield Rd, Craigavon BT64 1AG</p>
+            <p class="company-phone">123 456 7890</p>
+            <p class="company-email">info@ford.com</p>
+            <a href="index.html">Home</a>
+            <a href="faq.html">FAQs</a>
+            <a href="...">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="reg-log.html">Register/Log In</a>
+            <a href="order.html">Order</a>
+        </div>
+    </footer>
+</html>
