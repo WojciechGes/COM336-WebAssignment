@@ -1,5 +1,5 @@
 <?php
-include("login_Session.php");
+session_start();
 require('configConnect.php');
 
 if(isset($_POST["add_to_cart"]))

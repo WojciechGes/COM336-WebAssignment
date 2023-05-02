@@ -1,7 +1,3 @@
-<?php
-include("login_Session.php");
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,36 +17,7 @@ include("login_Session.php");
 <body>
 <?php include("navbar.php");?>
  
-<div style="clear:both"></div>
-			<br />
-			<h4>Order details</h4>
-<div>
-<div class="col-sm-6">
-<h5>Customer Details</h5>
-
-<form class = "col-sm-6" action="process-form.php" method="post">
-	<div class = "col-sm-6">
-	<label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-	</div>
-	<div class = "col-sm-6">
-	<label for="email">Email:</label>
-  	<input type="email" id="email" name="email" required>	
-	</div>
-	<div class = "col-sm-6"> 
-	<label for="phone">Phone:</label>
-  	<input type="tel" id="phone" name="phone">
-	</div>
-	<div class = "col-sm-6">
-	<label for="address">Address:</label>
-  	<textarea id="address" name="address"></textarea>
-	</div>
- 
- 
-  
-  <input type="submit" value="Submit">
- </form>	
-</div>		
+		
 <div class="table-responsive">
 				<table class="table table-bordered">
 					<tr>
@@ -87,7 +54,24 @@ include("login_Session.php");
 					}
 					?>
 				</table>
+				
+				
 			</div> 
+			<div>
+			<form action="salesinvoice.php">
+					<select name="Staff" id="drop" onchange="<?php $Staff?>;" >
+					<option <?php $Staff=1?>>George Jones</option>
+					<option <?php $Staff=2?>>Rose Beattie</option>
+					<option <?php $Staff=3?>>Michael Clarkson</option>
+					</select>
+				<?php	
+				$carID = $values["item_id"];
+				
+				$sql = "INSERT INTO `sales_invoice` (Car_ID,Customer_ID,Staff_ID) ".  "VALUES ('$carID', '','$Staff' )";
+            $res = mysqli_query($mySqlConn, $sql);		
+			?>	<button type="submit">Pay Now</button>
+			</form>
+				</div>
 			</div>
 			<?php
 			//include("footer.php");
