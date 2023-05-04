@@ -1,4 +1,10 @@
-<?php include("login_Session.php");?>
+<?php include("login_Session.php");
+
+if (($_SESSION["role"] == "admin") || ($_SESSION["role"] == "user")|| ($_SESSION["role"] == "")) {
+    $_SESSION["role"] = "guest";
+    }
+?>
+
 
 <!DOCTYPE html>
 <html>

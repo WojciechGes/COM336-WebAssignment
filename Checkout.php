@@ -1,3 +1,8 @@
+<?php include("login_Session.php");
+include ("shoppingcart.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +20,11 @@
 	 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php include("navbar.php");?>
- 
+<?php 	$_SESSION["role"] = "user"; 
+      	include("navbar.php");?>
+
+ You curretly have these items in your basket. </p>
+    <p> <a href="login.php?action=logout" > Logout </a> </p>
 		
 <div class="table-responsive">
 				<table class="table table-bordered">
@@ -66,10 +74,13 @@
 					</select>
 				<?php	
 				$carID = $values["item_id"];
+									
 				
-				$sql = "INSERT INTO `sales_invoice` (Car_ID,Customer_ID,Staff_ID) ".  "VALUES ('$carID', '','$Staff' )";
-            $res = mysqli_query($mySqlConn, $sql);		
-			?>	<button type="submit">Pay Now</button>
+				
+				$sql = "INSERT INTO `sales_invoice` (Car_ID,Customer_ID,Staff_ID, Total_Price) ".  "VALUES ('$carID', '1','$Staff', $total)";
+            $res = mysqli_query($mySqlConn, $sql);
+			session_unset();		
+			?>	<button session_unset(); type="submit">Pay Now</button>
 			</form>
 				</div>
 			</div>
@@ -79,3 +90,4 @@
 
 </body>
 </html>
+

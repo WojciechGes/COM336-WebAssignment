@@ -1,10 +1,10 @@
-<?php include("configConnect.php")?>
+<?php include("login_Session.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
 <?php 
 		$Page_Title_Name = "FAQ"; 
-		echo $Page_Title_Name;
+		//echo $Page_Title_Name;
 	?> 
     <link rel="stylesheet" href="assets/order.css">
 </head>

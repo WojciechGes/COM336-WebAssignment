@@ -60,7 +60,7 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`Customer_ID`, `Customer_FName`, `Customer_LName`, `Customer_SEX`, `Customer_DOB`, `Customer_Contact_Num`, `Customer_Address`, `Customer_Postcode`,`register_ID`) VALUES
 ('1','Wojciech','Geslak','M','2000/01/01','123456789','1ststreet','bt123jsf','1'),
-('2','Aidrian','Gormely','F','2002/02/01','1234567891','2ststreet','bt123js3','2');
+('2','Adrian','Gormely','F','2002/02/01','1234567891','2ststreet','bt123js3','2');
 
 -- reviews username and subject and body
 CREATE TABLE `reviews`(
@@ -83,7 +83,7 @@ CREATE TABLE `register`(
   `role`ENUM('admin', 'user') NOT NULL DEFAULT 'user'
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `register` (`register_ID`, `email`, `password`, `role`) VALUES(1,'admin','admim','admin');
+INSERT INTO `register` (`register_ID`, `email`, `password`, `role`) VALUES(1,'admin','admin','admin');
 INSERT INTO `register` (`register_ID`, `email`, `password`) VALUES(2,'jason@jason.com','123');-- 123
 
 CREATE TABLE `ford_dealers_staff` (
@@ -107,11 +107,12 @@ INSERT INTO `ford_dealers_staff` (`Staff_ID`, `Staff_FName`, `Staff_LName`, `Sta
 -- Table structure for table `sales_invoice`
 CREATE TABLE `sales_invoice` (
   `Invoice_ID` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `Invoice_Num` char(20) NOT NULL,
   `Date` date NOT NULL,
   `Car_ID` int DEFAULT NULL,
   `Customer_ID` int DEFAULT NULL,
-  `Staff_ID` int DEFAULT NULL
+  `Staff_ID` int DEFAULT NULL,
+  `Total_Price` int DEFAULT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Indexes for table `sales_invoice`
@@ -131,3 +132,6 @@ ALTER TABLE `reviews`
 ALTER TABLE `customer`
   ADD KEY `FK1_Customer_register` (`register_ID`),
   ADD CONSTRAINT `FK1_Customer_register` FOREIGN KEY (`register_ID`) REFERENCES `register` (`register_ID`);
+
+
+ALTER TABLE `sales_invoice` CHANGE `Date` `Date` DATE NOT NULL DEFAULT CURRENT_TIMESTAMP;

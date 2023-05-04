@@ -1,9 +1,6 @@
 <?php
-
-	// Connect to the MySQL database
-    include ("configConnect.php");
-	
-	// Check if the form has been submitted
+ include("login_Session.php");
+// Check if the form has been submitted
 include ("Register_Form_Varibles.php");	
 
 

@@ -1,7 +1,5 @@
 <?php
 session_start();
-require('configConnect.php');
-
 if(isset($_POST["add_to_cart"]))
 {
 	if(isset($_SESSION["shopping_cart"]))
@@ -15,6 +13,7 @@ if(isset($_POST["add_to_cart"]))
 				'item_name'			=>	$_POST["hidden_name"],
 				'item_price'		=>	$_POST["hidden_price"],
 				'item_colour'		=>	$_POST["hidden_colour"],
+				
 			);
 			$_SESSION["shopping_cart"][$count] = $item_array;
 		}

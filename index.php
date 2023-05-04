@@ -1,3 +1,4 @@
+<?php include("login_Session.php");?>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +6,6 @@
     <Title>
         <?php 
 $Page_Title_Name = "Ford Dealership"; 
-echo $Page_Title_Name;
 ?>
     </Title>
     <link rel="stylesheet" href="assets/index.css">
@@ -13,7 +13,9 @@ echo $Page_Title_Name;
 
 <body>
 
-<?php include("navbar.php");?>
+<?php 
+
+include("navbar.php");?>
 
 <div class="container">
                 <div class="content-container">

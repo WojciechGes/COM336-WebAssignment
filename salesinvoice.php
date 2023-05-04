@@ -1,6 +1,4 @@
-<?php 
-    include("login_Session.php");
-?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -49,22 +47,20 @@
                             <thead>
                                 <tr>
                                     <th>Invoice_ID</th>
-                                    <th>Invoice Number</th>
                                     <th>Date</th>
                                     <th>Car_ID</th>
                                     <th>Customer_ID</th>
                                     <th>Staff_ID</th>
-                                    
+                                    <th>Total_Price</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php 
-                                    $mySqlConn = mysqli_connect("localhost","root","","ford dealership");
-
+                                    
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
-                                        $query = "SELECT * FROM sales_invoice WHERE CONCAT(Invoice_ID,Invoice_Num,Date,Car_ID,Customer_ID,Staff_ID) LIKE '%$filtervalues%' ";
+                                        $query = "SELECT * FROM sales_invoice WHERE CONCAT(Invoice_ID,Date,Car_ID,Customer_ID,Staff_ID, Total_Price) LIKE '%$filtervalues%' ";
                                         $query_run = mysqli_query($mySqlConn, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
@@ -73,12 +69,12 @@
                                             {
                                                 ?>
                                                 <tr>
-                                                    <td><?= $items['Invoice_ID']; ?></td>
-                                                    <td><?= $items['Invoice_Num']; ?></td>
+                                                    <td><?= $items['Invoice_ID']; ?></td>                                                    
                                                     <td><?= $items['Date']; ?></td>
                                                     <td><?= $items['Car_ID']; ?></td>
                                                     <td><?= $items['Customer_ID']; ?></td>
                                                     <td><?= $items['Staff_ID']; ?></td>
+                                                    <td><?= $items['Total_Price']; ?></td>
                                                 </tr>
                                             <?php
                                             }

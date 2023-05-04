@@ -1,5 +1,8 @@
 <?php 
     include("login_Session.php");
+    if ($_SESSION["role"] == "user" || ($_SESSION["role"] == "guest")) {
+        $_SESSION["role"] = "admin";
+        }
 ?>
 <!doctype html>
 <html lang="en">

@@ -1,5 +1,10 @@
 <?php
-include("shoppingcart.php");
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+include("login_Session.php");
+include ("shoppingcart.php");
+
+
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +13,7 @@ include("shoppingcart.php");
 	<Title>
 		<?php 
 			$Page_Title_Name = "Shopping"; 
-			echo $Page_Title_Name;
+			//echo $Page_Title_Name;
 		?> 
 	</Title> 
 </head>
@@ -21,14 +26,14 @@ include("shoppingcart.php");
 	 </head> 	
      <body>
      <header style="height:100x width: 100px">
-	 <?php include("navbar.php");?>
+	 
+	 <?php  $_SESSION["role"] = "user"; 
+	 		include("navbar.php");?>
         </header>
         <div class="container-fluid" Style = "postion: center;">
 			<br />
       <h4 align="center">Ford Dealership</h4><br />
-	  <p> Welcome, <strong> <?php echo $_SESSION["email"] ?> </strong> ! You are 
-    currently logged in. </p>
-    <p> <a href="login.php?action=logout" > Logout </a> </p>
+
 				<?php
 				$query = "SELECT * FROM car ORDER BY Car_ID ASC";
 				$result = mysqli_query($mySqlConn, $query);
@@ -48,12 +53,11 @@ include("shoppingcart.php");
 						<img class ="CustomImage" src="images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
 						<h5 class="text-info"><?php echo "Model: ".$row["Model"]; ?></h5>
 						<h5 class="text-info"><?php echo "Car Colour: ".$row["Colour"]; ?></h5>
-						<h5 class="text-dark">$ <?php echo $row["Price"]; ?></h5>
-						<input type="hidden" name="hidden_name" value="<?php echo $row["Model"]; ?>" />
+						<h5 class="text-dark">$<?php echo $row["Price"]; ?></h5>
+						<input type="hidden" name="hidden_name" value="<?php echo $row["Model"]; ?>" />	
 						<input type="hidden" name="hidden_price" value="<?php echo $row["Price"]; ?>" />
 						<input type="hidden" name="hidden_colour" value="<?php echo $row["Colour"]; ?>" />
 						<input type="submit" name="add_to_cart" style="margin-top:10px;" class="btn btn-primary" value="Add to Cart" />
-						<td><a href="Checkout.php<?php echo $values["item_id"]; ?>"><span class="text-dark">add to cart</span></a></td>
 					    </div>
                 </form>
 			        

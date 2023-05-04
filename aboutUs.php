@@ -21,46 +21,7 @@ include("login_Session.php");
     <body>
     <?php include("navbar.php");?>
 
-    <section class="row">
-            <div class="grid">
-                
-                <section class="col-2-3">
-                    <br><h2>Our Mission Statement</h2><br>
-                    
-                    <p>At Ford, we are committed to providing our 
-                        customers with the best possible online shopping experience for 
-                        Ford vehicles.</p><br>
-        
-                    <p>Our mission is to offer a wide selection 
-                    of high-quality cars at competitive prices, while delivering exceptional 
-                    customer service and support throughout the entire purchase process. 
-                    We strive to create a seamless and user-friendly e-commerce platform that 
-                    makes it easy for our customers to browse, compare, and purchase their 
-                    dream car from the comfort of their own home.</p><br>
-                        
-                    <p>Our goal is to exceed our 
-                    customers' expectations by providing personalized assistance, transparent 
-                    pricing, and convenient financing options</p><br>
-        
-                    <p>At Ford, we are 
-                    dedicated to becoming your trusted online destination for all your 
-                    Ford car needs.</p><br>
-
-                    <p>We value transparency and honesty, and we believe that our customers
-                    deserve to know exactly what they are getting. That is why we provide 
-                    detailed descriptions, pricing, and shipping information on our website.</p><br>
-
-                    <p>Thank you for considering us for your vehicular needs. We look forward to serving 
-                       you and exceeding your expectations. If you have any questions or comments, please do
-                       not hesitate to contact us on our "Contact Us" page by simply clicking the button below: 
-                    </p><br>
-
-                    <div class="button-container">
-                        <a href="contact.html" class="contact-button">Get In Touch</a>
-                    </div>
-                </section>
-            </div>
-        </section>
+    
         <div class="title">
             <h2>Meet Our Staff</h2>
         </div>
