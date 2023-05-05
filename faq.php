@@ -7,6 +7,7 @@
 		//echo $Page_Title_Name;
 	?> 
     <link rel="stylesheet" href="assets/order.css">
+    <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
 <?php
@@ -54,9 +55,7 @@ if ( isset($subject) && isset($body) ) {
      print "<strong>$subject</strong><br>";
      print "$body<br><br>";
 
-  }?><?php
-include("footer.php");
-?>
+  }?>
 </body>
 
 </html>

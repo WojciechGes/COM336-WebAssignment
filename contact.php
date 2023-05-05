@@ -9,6 +9,7 @@
     <head>
 <?php $Page_Title_Name = "Contact Us"; ?> 
      <link rel="stylesheet" href="assets/contact.css">
+     <link rel="stylesheet" href="assets/index.css">
     </head>
     <body>
    <?php include("navbar.php");?>

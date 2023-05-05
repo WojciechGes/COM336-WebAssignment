@@ -5,9 +5,9 @@ include("navbarActiveSwitch.php");
 if ($_SESSION["role"] == "admin") {
 ?>
     <div class="wrapper">
-        <div class="logo">
-            <!--<img src="assets/images/ford.png" alt="logo"> -->
-        </div>
+    <div class="logo">
+                <img src="assets\images\ford.png" alt="logo">
+			</div>
         <ul class="menu">
            
             <li><a class=<?php echo $Highlight_Navbar_Active2; ?> href="faq.php">FAQs</a></li>
@@ -24,9 +24,10 @@ if ($_SESSION["role"] == "admin") {
 <?php
 } elseif ($_SESSION["role"] == "user") { ?>
     <div class="wrapper">
-        <div class="logo">
-            <!--<img src="assets/images/ford.png" alt="logo"> -->
-        </div>
+    <div class="logo">
+                <img src="assets\images\ford.png" alt="logo">
+			</div>
+
         <ul class="menu">
             <li><a class=<?php echo $Highlight_Navbar_Active1; ?> href="index.php">Home</a></li>
             <li><a class=<?php echo $Highlight_Navbar_Active2; ?> href="faq.php">FAQs</a></li>
@@ -45,8 +46,9 @@ if ($_SESSION["role"] == "admin") {
 ?>
     <div class="wrapper">
     <div class="logo">
-        <!--<img src="assets/images/ford.png" alt="logo"> -->
-    </div>
+                <img src="assets\images\ford.png" alt="logo">
+			</div>
+    
     <ul class="menu">
         <li><a class=<?php echo $Highlight_Navbar_Active1; ?> href="index.php">Home</a></li>
         <li><a class=<?php echo $Highlight_Navbar_Active2; ?> href="faq.php">FAQs</a></li>

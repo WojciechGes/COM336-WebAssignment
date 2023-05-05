@@ -33,11 +33,14 @@ $status = "Message <i>$email</i> has been posted<br><br>";
 </head>
 
 <body>
-<?php include("navbar.php");?>
+
+<?php $_SESSION["role"] = "guest";
+include("navbar.php");?>
     <header>
         <div class="wrapper">
             <div class="logo">
-                <img src="" alt="logo">
+                <img src="assets\images\ford.png" alt="logo">
+			</div>
 
                 <section class="row-alt">
 				<div class="lead container">
@@ -46,6 +49,7 @@ $status = "Message <i>$email</i> has been posted<br><br>";
 					<p>Please fill in the registration form below to create an account. If you have any enquiries or issues, please contact us on <a href="register@******.com"></a>info@ford.com</p>
 			
 				</div>
+			</div>
 			</section>
 			<section class="row">
 				<div class="grid">

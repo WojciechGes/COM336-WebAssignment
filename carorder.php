@@ -18,18 +18,16 @@ include ("shoppingcart.php");
 	</Title> 
 </head>
 <link rel="stylesheet" href="assets/order.css">
-    
+<link rel="stylesheet" href="assets/index.css">
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
+
 	 </head> 	
      <body>
-     <header style="height:100x width: 100px">
-	 
 	 <?php  $_SESSION["role"] = "user"; 
 	 		include("navbar.php");?>
-        </header>
         <div class="container-fluid" Style = "postion: center;">
 			<br />
       <h4 align="center">Ford Dealership</h4><br />

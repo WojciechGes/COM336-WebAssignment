@@ -1,5 +1,5 @@
 <?php
-
+$incorrectEmailandPassword = false;
 include ("configConnect.php");
 session_start();
 if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
    }
    else {
-      echo "Invalid Email or Password";
+      $incorrectEmailandPassword = true;
       }
 }
 

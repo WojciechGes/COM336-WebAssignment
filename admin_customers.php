@@ -64,7 +64,7 @@
                             </thead>
                             <tbody>
                                 <?php 
-                                    $mySqlConn = mysqli_connect("localhost","root","","ford dealership");
+                                   include("configConnect.php");
 
                                     if(isset($_GET['search']))
                                     {

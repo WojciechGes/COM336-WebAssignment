@@ -32,7 +32,17 @@ echo $Page_Title_Name;
    <br>
    <button type="submit">Log in</button>
 </form>
+<div><?php 
+if($incorrectEmailandPassword == true){
+ $stringEmail = "Invalid Email or Password";
+ echo $stringEmail;
+}
+else{
+echo "";
+$incorrectEmailandPassword = false;
+}
 
+?></div>
 </body>
 </html>
 

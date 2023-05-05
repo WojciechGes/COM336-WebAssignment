@@ -17,6 +17,7 @@ include("login_Session.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 	 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
      <link rel="stylesheet" href="assets/about.css">
+     <link rel="stylesheet" href="assets/index.css">
     </head>
     <body>
     <?php include("navbar.php");?>
