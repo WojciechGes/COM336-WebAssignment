@@ -87,10 +87,15 @@ include("shoppingcart.php");
 		</div>
 		
 		<?php extract($_REQUEST);
+		$car_Remove_id = $_GET["id"];
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$Staff = $_POST["Staff"];
 			echo '<script>alert("Staff UPDATED.")</script>';
 			echo '<script>window.location="salesinvoice.php"</script>';
+			$sql = "DELETE FROM car WHERE Car_ID=$car_Remove_id";
+
+  			$result = mysqli_query($mySqlConn, $sql);
+   			$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 		}
 		?>
 		<div class="row">
